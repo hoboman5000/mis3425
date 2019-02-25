@@ -18,7 +18,9 @@ a {
 
 /*Top Navigation Bar*/
 .topnav {
-	position: relative;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
 	background: rgba(0, 0, 0, 0.75);
 	display: inline-flex;
 	width: 100%;
@@ -26,9 +28,6 @@ a {
  
 ul.navbar {
   overflow: hidden;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
   width: 100%;
   list-style-type: none;
   margin: 0;
@@ -37,6 +36,7 @@ ul.navbar {
 ul.navbar li {
 	float: right;
 }
+
 ul.navbar a {
   display: block;
   color: #f2f2f2;
@@ -56,7 +56,7 @@ ul.navbar a:hover:not(.active) {
 
 ul.navbar li a.active {
 	background-color: SlateGray;
-	color: White;
+	color: black;
 }
 
 ul.navbar li.left{
