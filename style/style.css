@@ -13,7 +13,7 @@ img {
 }
 
 a {
-	color: white;
+	color: blue;
 }
 
 /*Top Navigation Bar*/
@@ -54,14 +54,20 @@ ul.navbar a:hover:not(.active) {
   color: black;
 }
 
-ul.navbar li a.active {
+.active {
 	background-color: SlateGray;
 	color: black;
 }
 
+/* ul.navbar li a.active {
+	background-color: SlateGray;
+	color: black;
+} */
+
 ul.navbar li.left{
 	float: left;
 }
+
 
 
 @media screen and (max-width: 600px) {
@@ -78,6 +84,10 @@ ul.navbar li.left{
 	background: rgba(0, 0, 0, 0.75);
 	margin: auto;
 	text-align: center;
+	color: white;
+}
+
+.footer a {
 	color: white;
 }
 
@@ -131,6 +141,7 @@ ul.navbar li.left{
 	padding: 10px;
 	align-items: flex-start;
 	align-content: center;
+	padding-bottom: 100px;
 }
 
 .flexcontainer>* {
@@ -140,6 +151,12 @@ ul.navbar li.left{
 .tripBox{
 	padding: 10px;
 	vertical-align: top;
+}
+
+.contentBox {
+	width: 100%;
+	height: auto;
+	flex-flow: row wrap !important;
 }
 
 .header, h2 {
@@ -155,15 +172,10 @@ ul.navbar li.left{
 }
 
 #homepage {
-	background: url("../images/alhambra_bg.jpg") no-repeat center center fixed; 
+	background: black url("../images/alhambra_bg.jpg") no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	z-index: -2;
 }
-
-#contentpage {
-	
-}
-
