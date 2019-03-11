@@ -1,127 +1,223 @@
 @charset "utf-8";
-
+/*General CSS*/
 html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
 }
 
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+}
+
+header, main, nav, footer, section, article, figure, figcaption, aside {
+	display: block;
+}
+
 img {
     border-style: none;
     max-width: 100%;
     height: auto;
+	float: right;
+	padding-left: 0.625em;
 }
 
 a {
 	color: blue;
+	text-decoration: none;
+	font-weight: bold;
 }
 
-/*Top Navigation Bar*/
-.topnav {
-	position: sticky;
-	position: -webkit-sticky;
-	top: 0;
-	background: rgba(0, 0, 0, 0.75);
-	display: inline-flex;
+a:hover {
+	text-decoration: underline;
+	
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Georgia', 'Arial', sans-serif;
+}
+
+nav {
+	z-index: 1;
+	margin-bottom: 1em;
+}
+
+main {
+	z-index: -1;
+}
+.lesson {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.search {
+	position: relative;
+	width: 25%;
+	position: top;
+	float: right;
+	padding-right: 1em;
+	z-index: 10;
+}
+
+/*Top Navigation Bar Default Behavior and Under 768px*/
+.navbar {
+    font-size: 1.5vw;
+    background: rgba(0, 0, 0, 0.75);
+    border: 0.0625em solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 0.625em;
 	width: 100%;
 }
- 
-ul.navbar {
-  overflow: hidden;
-  width: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-ul.navbar li {
-	float: right;
+
+.main-nav {
+    list-style-type: none;
+    display: none;
 }
 
-ul.navbar a {
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 1.5vw;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.main-nav a, .logo {
+    text-decoration: none;
+    color: White;
 }
 
-ul.navbar a:hover:not(.active) {
-  background: DimGray;
-  color: black;
+.main-nav li {
+    text-align: center;
+    margin: 0.5em auto;
+	padding-top: 0.5em;
+}
+
+.logo {
+    display: inline-block;
+/*     font-size: 1.375em;
+    margin-top: 0.625em;
+    margin-left: 1.25em;
+	height: 6.25em;
+	padding-top:0.75em; */
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: 0.625em;
+    right: 1.25em;
+	margin-top: 0.625em;
+	margin-right: 1.25em;
+	padding-top: 1.5625em;
+    cursor: pointer;
+    color: white;
+    font-size: 1.875em;
+	z-index: 2;
 }
 
 .active {
+    display: block;
+}
+
+.dropdown {
+	visibility: hidden;
+	padding-top: 0.5em;
+	padding-right: 1em;
+}
+
+.dropdown:hover:not(.active) .dropbtn {
+  background: Red;
+  text-decoration: none;
+  color: White;
+}
+
+.dropdown a {
+	color: white;
+}
+
+.dropdown .dropbtn {
+	border: none;
+	outline: none;
+	background-color: inherit;
+	font-family: inherit;
+  color: White;
+  text-align: center;
+  
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.95);
+  min-width: 10em;
+  box-shadow: 0px 0.5em 1em 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  vertical-align: middle;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.activeLink {
 	background-color: SlateGray;
-	color: black;
+	color: Red;
 }
 
-/* ul.navbar li a.active {
-	background-color: SlateGray;
-	color: black;
-} */
-
-ul.navbar li.left{
-	float: left;
+/*Common Header CSS*/
+header {
+	width: 80%;
+}
+.header {
+	height: 18.75em;
+	max-height: 18.75em;
+	width: auto;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 0;
 }
 
-
-
-@media screen and (max-width: 600px) {
-	ul.navbar li.left, ul.navbar li {
-		float: none;
-	}
+.header h1 {
+	color: white;
+	font-size: 4vw;
+	-webkit-text-stroke: 0.03125em black;
+	text-shadow:
+	-0.03125em -0.03125em 0 #000,  
+	0.03125em -0.03125em 0 #000,
+	-0.03125em 0.03125em 0 #000,
+	0.03125em 0.03125em 0 #000;
+	padding-left: 1%;
 }
 
+/*Footer CSS*/
 .footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	height: 60px;
+	height: auto;
 	background: rgba(0, 0, 0, 0.75);
+	border: 0.0625em solid rgba(0, 0, 0, 0.2);
 	margin: auto;
 	text-align: center;
 	color: white;
+	font-size: 1em;
 }
 
 .footer a {
 	color: white;
 }
 
-.logo {
-	float: left;
-	height: auto;
-	width: 100%;
-	max-width: 233px;
-
-	margin-top: -4px;
-	}
-
+/*Containers*/
 .container {
 	min-height: 100%;
 	position: relative;
-}
-
-.homeBanner, h1 {
-	color: #f2f2f2;
-	font-size: 6vw;
-	font-weight: bold;
-	float: right;
-	margin-top: 10%;
-	margin-bottom: 0px;
-	margin-right: 2%;
-}
-
-.homeTag {
-	color: #f2f2f2;
-	font-size: 2vw;
-	float: right;
-	clear: both;
-	margin-top: -10px;
-
+	z-index: 0;
 }
 
 .contentContainer {
@@ -130,47 +226,212 @@ ul.navbar li.left{
 }
 
 .hide {
-	visibility: collapse;
+	visibility: hidden;
+	width: 100%;
 }
 
-/*Flex Box for Where I've Been*/
 .flexcontainer{
-	display: flex;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	flex-wrap: wrap;
-	justify-content: flex-start;
-	padding: 10px;
+	/* justify-content: flex-start; */
+	justify-content: space-evenly;
+	padding: 0.625em;
 	align-items: flex-start;
 	align-content: center;
-	padding-bottom: 100px;
+	padding-bottom: 6.25em;
+		clear: both;
 }
 
 .flexcontainer>* {
 	flex: 1 1 auto;
 }
 
+.flexContainerContent{
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	flex-wrap: wrap;
+	/* justify-content: flex-start; */
+	justify-content: space-evenly;
+	padding: 0.625em;
+	align-items: flex-start;
+	align-content: center;
+	padding-bottom: 6.25em;
+	clear: both;
+}
+
+.flexContainerContent>* {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
 .tripBox{
-	padding: 10px;
+	padding: 0.625em;
 	vertical-align: top;
+	/* width: 100%; */
+	height: auto;
+	flex-flow: row wrap !important;
+	flex: 0 1 auto;
 }
 
 .contentBox {
 	width: 100%;
 	height: auto;
 	flex-flow: row wrap !important;
+	flex: 0 1 auto;
 }
 
-.header, h2 {
-	/*This is the code causing the issue with it commented in, and the in-line style removed from trip.html the CSS background displays twice like a drop shadow*/
-	/*Removing this code and using the in-line declaration in the HTML solves the problem/*/
-	/* background: url("../images/banner.jpg") no-repeat; */
-	height: 300px;
-	max-height: 300px;
-	font-size: 4vw;
+.detailsBox{
+	padding: 0.625em;
+	vertical-align: top;
+	width: 80%;
+	height: auto;
+	flex-wrap: row wrap !important;
+	flex: 0 1 auto;
+}
+
+.slideBox{
+	padding: 0.625em;
+	vertical-align: top;
 	width: auto;
-	margin-bottom: 40px;
-	color: white;
+	height: auto;
+	flex-wrap: row wrap !important;
+	flex: 0 1 auto;
+	background: rgba(0, 0, 0, 0.75);
 }
 
+/*Home Page CSS*/
+.homeBanner {
+	float: right;
+	margin-top: 10%;
+	margin-right: 2%;
+}
+
+.homeBanner h1 {
+	color: white;
+	font-size: 6vw;
+	font-weight: bold;
+}
+
+.homeBanner p {
+	color: white;
+	font-size: 2vw;
+	float: right;
+	margin-top: -8%;
+}
+
+.homeTag {
+	color: #f2f2f2;
+	font-size: 2vw;
+	float: right;
+	clear: both;
+	margin-top: -1%;
+}
+
+/*Slideshow CSS for Picture Pages*/
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  margin-top: 40%;
+  bottom: 1.5625em;
+  width: auto;
+  padding: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 1.125em;
+  transition: 0.6s ease;
+  border-radius: 0 0.1875em 0.1875em 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 0.1875em 0 0 0.1875em;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 1.25em;
+  padding: 0.5em 0.75em;
+  position: absolute;
+  top: -75%;
+  bottom: 0.5em;
+  width: 100%;
+  text-align: center;
+  	-webkit-text-stroke: 0.03125em black;
+	text-shadow:
+	-0.0625em -0.0625em 0 #000,  
+	0.0625em -0.0625em 0 #000,
+	-0.0625em 0.0625em 0 #000,
+	0.0625em 0.0625em 0 #000;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 0.75em;
+  padding: 0.5em 0.75em;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 0.125em;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/*Page Specific CSS*/
 #homepage {
 	background: black url("../images/alhambra_bg.jpg") no-repeat center center fixed; 
 	-webkit-background-size: cover;
@@ -178,4 +439,211 @@ ul.navbar li.left{
 	-o-background-size: cover;
 	background-size: cover;
 	z-index: -2;
+}
+
+#beenPage {
+	background: DarkGrey url("../images/stonehenge_banner.jpg") no-repeat center center;
+}
+
+#beenPage h1 {
+	padding-left: 1.25em;
+	padding-top: 1.25em;
+	float: left;
+}
+
+#goingPage {
+	background: DarkGrey url("../images/banner.jpg") no-repeat center center;
+}
+
+#goingPage h1 {
+	padding-left: 1.25em;
+	padding-top: 1.25em;
+	float: left;
+}
+
+#goingTitle h1 {
+	text-align: center;
+}
+
+#resourcePage {
+	background: DarkGrey url("../images/lisbon_banner.jpg") no-repeat center center;
+}
+
+#resourcePage h1 {
+	padding-left: 1.25em;
+	float: left;
+}
+
+#contactPage {
+	background: DarkGrey url("../images/aruba_banner.jpg") no-repeat center center;
+}
+
+#contactPage h1 {
+	padding-left: 1.25em;
+	padding-top: 7.5em;
+	float: left;
+}
+
+#trip1 {
+	background: linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%);
+}
+
+#trip2 {
+	background: DarkGrey url("../images/banner.jpg") no-repeat center center;
+}
+
+#trip3 {
+	background: DarkGrey url("../images/aruba_banner.jpg") no-repeat center center;
+}
+
+#trip4 {
+	background: DarkGrey url("../images/disney_banner.jpg") no-repeat center center;
+}
+
+#trip5 {
+	background: DarkGrey url("../images/stonehenge_banner.jpg") no-repeat center center;
+}
+
+/*Hide the Footer Links on large displays*/
+.hiddenLink {
+	visibility: hidden;
+}
+
+/*Change Past trips from a drop-down to a link on mobile*/
+#tripLink {
+	visibility: hidden;
+}
+
+/*Media Queries*/
+@media screen and (max-width:600px) {
+	/*I chose to disable search at 600px, it made everything cleaner. I may implement a separate search page for under 600px*/
+
+	
+	.header {
+		background: DarkGrey !important;
+		height: 8em;
+	}
+	
+	.header h1 {
+	color: white;
+	font-size: 2em;
+	-webkit-text-stroke: 0.03125em black;
+	text-shadow:
+	-0.03125em -0.03125em 0 #000,  
+	0.03125em -0.03125em 0 #000,
+	-0.03125em 0.03125em 0 #000,
+	0.03125em 0.03125em 0 #000;
+	padding-left: 1%;
+	}
+	
+	#tripLink {
+		visibility: visible;
+	}
+	
+}
+
+@media screen and (max-width:768px) {
+	.hiddenLink {
+		visibility: visible;
+	}
+	
+	img {
+		visibility: hidden;
+	}
+	
+	#tripLink {
+		visibility: visible;
+	}
+	#logo {
+		visibility: visible;
+	}
+	
+	.search {
+		visibility: hidden;
+	}
+}
+
+@media screen and (min-width: 769px) {
+	.navbar {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		justify-content: space-between;
+		padding-bottom: 0;
+		height: auto;
+		align-items: center;
+		text-align: center;
+		position: sticky;
+		position: -webkit-sticky;
+		top: 0;
+	}
+
+	.main-nav {
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		margin-right: 1.875em;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+
+	.main-nav li {
+		margin: 0;
+	}
+
+	.main-nav a {
+		margin-left: 2.5em;
+	}
+	
+	.dropdown-content a {
+		margin-left: 0 !important;
+	}
+
+	.logo {
+		margin-top: 0;
+	}
+
+	.navbar-toggle {
+		display: none;
+	}
+	
+	.dropdown {
+		visibility: visible;
+	}
+	
+	.main-nav a:hover, .dropdown-content a:hover {
+		background-color: Red;
+		color: White;
+	}
+
+	.dropdown:hover .dropdown-content {
+	display: block;
+	vertical-align: middle;
+	}
+	
+}
+
+@media screen and (min-width: 1200px) {
+	.dropdown {
+		padding-right: 2em !important;
+	}
+}
+
+/*Fixing display errors in Edge*/
+@supports (-ms-ime-align:auto) {
+.footer {
+    position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	background: rgba(0, 0, 0, 0.75);
+	border: 0.0625em solid rgba(0, 0, 0, 0.2);
+	margin: auto;
+	text-align: center;
+	color: white;
+	font-size: 1em;
+    }
+#homepage {
+	max-height: 100%;
+	overflow: hidden;
+}
+
 }
