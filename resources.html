@@ -2,97 +2,188 @@
 <html lang="en">
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135900001-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-<link rel="stylesheet" href="style/style.css">
+	  gtag('config', 'UA-135900001-1');
+	</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="icon" href="./images/favicon.png" type="image/ico">
+	<title>Resource I Have Found Useful</title>
+
+    <meta name="description" content="Mike Booth's MIS 3450 Term Project Site">
+
+    <meta name="author" content="Mike Booth">
+
+    <meta name="keywords" content="Project, MIS 3450, Travel, Cruise, Europe, Mexico, Caribbean, Texas, Florida, Canada, New York, St Thomas, Grenada, Barbados, Tobago, Aruba, Grand Cayman, Houston, St Marteen, St Martin, Puerto Rico, Grand Turk, Disney World, 
+	Universal Studios, London, Bath, Stonehenge, Gibraltar, Granada, Malaga, Genralife, Alhambra, Spain, England, Nova Scotia, Halifax, Lisbon, Portugal, Vigo, Tui, Valenca">
+
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="icon" href="./images/favicon.png" type="image/ico">
+	
+	<!--[if lt IE 9]>
+    <script src="scripts/html5shiv.js"></script>
+    <![endif]-->
 
 </head>
 <body>
 
 	<div class="container">	
-	
-		<div class="topnav">
+
+		<nav class="navbar">
 		
-			<a href="index.html"><img src="./images/crop_logo_transparent.png" alt="Logo" class="logo"></a>			
-			<ul class="navbar" id="nav">				
-				<li><a href="contact.html">Contact</a></li>
-				<li class="active"><a class="active" href="resources.html">Useful Resources</a></li>			
-				<li><a href="going.html">Where I'm Going</a></li>				
-				<li><a href="trips.html">Where I've Been</a></li>				
+			<label class="navbar-toggle" id="js-navbar-toggle">
+				<i class="fa fa-bars"></i>
+			</label>
+			
+			<a href="index.html" class="logo"><img src="./images/crop_logo_transparent.png" id="logo"></a>
+			
+			<ul class="main-nav" id="js-menu">
+				
+				<div class="dropdown">
+					<button class="dropbtn">Past Trips<i class="fa fa-caret-down"></i></button>
+						<div class="dropdown-content">
+							<a href="trips.html">Trip List</a>
+							<a href="mexico2006.html">Mexico 2006</a>
+							<a href="caribbean2015.html">Caribbean 2015</a>
+							<a href="caribbean2016.html">Caribbean 2016</a>
+							<a href="florida2017.html">Florida 2017</a>
+							<a href="europe2018.html">Europe 2018</a>
+						</div>
+				</div>
+				
+				<li>
+					<a href="going.html" class="nav-links">Future Trips</a>
+				</li>
+				<li>
+					<a href="resources.html" class="activeLink">Useful Resources</a>
+				</li>
+				
+				<li>
+					<a href="trips.html" class="nav-links" id="tripLink">Past Trips</a>
+				</li>
+
 			</ul>
 			
-		</div>
+				<div class="search"><gcse:search></gcse:search></div>
+			
+		</nav><!--End Nav-->
 
-	<div class="contentContainer">
-	
-		<div class="flexcontainer">
-								<!--remove or comment this in-line style declaration to replicate issue-->
-			<div class="header" style="background: url(./images/banner.jpg)">			
-				<h2>Planning Resources</h2>				
-			</div>
-			
-			<div class="hide">
-				*****************************************************************************************************************************************************************************
-			</div>
-			
-			<div class="contentBox" style="order:1">
-				<h3>Resources I Use</h3>
-					<ul>
-						<li><a href="https://www.vacationstogo.com/">Vacations-to-Go</a></li>
-							<p>I use this site for researching deals on cruises with under 2 months before the sail date. In the past I've managed to get deals of 50% off or more. The trade off for this is that airfare
-							may be more expensive due to the late booking. I highly recommend comparing the price here to the price on the cruise company's official site.
-							Many have price guarantees that you can take advantage of.</p>
-						<li><a href="https://www.viator.com/">Viator</a></li>
-							<p>This site is great for finding guided day trips and other things to do in locations. I've used it many times on cruises to find similar offering to the cruise excursions at cheaper prices.
-							Be sure to note the terms and conditions of any offer, required documentation, and ticketing policies. Some require a paper ticket, some offer smart-phone ticketing, virtually all require photo ID, 
-							etc.</p>
-						<li><a href="https://www.carnival.com/">Carnival</a></li>
-							<p>I love cruising with Carnival. The atmosphere on the ships is more laid back than it was on Royal Caribbean, while the quality is comparable. Cruising on Carnival over Spring Break and St Patrick's Day 
-							are experiences I will not forget! Their site is slightly difficult to navigate, but improvements are being made. If you plan to book a cruise a year or two in advance, take advantage of their site.</p>
-						<li><a href="https://www.hotels.com/">Hotels.com</a></li>
-							<p>Booking hotels has become a game of cat and mouse recently with the Internet. I've found that to get the best deal I have to go to multiple sites, the company's, Hotels.com, and Kayak.
-							 Shop around enough and you can find some great deals. However, don't overlook the power of Google Maps for locating and booking hotels.</p>
-						<li><a href="https://www.kayak.com/">Kayak.com</a></li>
-							<p>Kayak has become my goto site for airfare. The deals available here are usually unbeatable, unless you want to risk long delays, fees, and multiple plane changes. The only issue I have with Kayak is 
-							if I want to fly Southwest, or Jet Blue. To fly those airlines it has been best to book directly through their corporate sites.</p>
-						<li><a href="https://www.google.com">Google</a></li>
-							<p>To paraphrase Darth Vader "Do not under estimate the power of the Google." My recent Europe trip had me scrambling to find affordable hotel options for the New York City portion. Finally, using Google Maps 
-							we were able to locate an affordable, quality hotel within easy walking distance of Time Square, the USS Intrepid, and several other attractions. While not as easy to use as Kayak or Hotels.com, it has the benefit of 
-							many options that aren't listed on either of those sites. Plus you can immediately see the location of the hotel related to nearby attractions.</p>
-						<li>Other Cruise Company Sites</li>
-							<p>If the party atmosphere on Carnival isn't for you take a look at some of the other cruise lines home pages. I generally browse itineraries on Vacations-to-Go then compare the pricing and get more information 
-							on the company's sites.</p>
-					</ul>
-			</div>
-			
-			<div class="contentBox" style="order:2">
-				<h3>Resources I Don't Use</h3>
-					<ul>
-						<li>Expedia</li>
-							<p>
-							I used to be a huge fan of Expedia, but then I got burned multiple times. I booked a flight with them and was told that I could add check bags for X price after the booking. I tried to do so, and was informed that I needed to add 
-							the bags at the gate for the same price. At the gate I was informed that this was incorrect and the price would be 4 times as much as was quoted. Nothing I did could get them to budge, and since this was the final leg of the 
-							trip I was stuck. This was just the latest example of issues I've had with this site. Confusing terms and conditions, unclear fine print, offers that lead you in only to no longer be available, all of these have led me to stop 
-							using this site altogether. The final draw was the amount of marketing that was sent to me by the company after signing up for an account with them. Dozens of messages peppered my inbox about add-ons, and up-sells.
-							<br>
-							My advice, stay clear and use at your own risk.
-							</p>
-					</ul>
-			</div>
-		</div>
+		<header class="header" id="resourcePage">			
+			<h1>Useful Resources</h1>				
+		</header>
 		
-	</div>
-	
-		<div class="footer">
-			<p>Copyright &copy; 2019 Michael W. Booth
-			<br> 
-			<a href="mailto:mike.booth5k@gmail.com">mike.booth5k@gmail.com</a>
-			</p>
-		</div><!--End Footer-->
-		
+		<main>
+			<div class="contentContainer">
+			
+				<div class="flexcontainer">
+
+					
+					
+					<div class="hide">
+						*****************************************************************************************************************************************************************************
+					</div>
+					
+					<div class="contentBox" style="order:1">
+						<h3>Resources I Use</h3>
+							<ul>
+								<div class="contentBox" style="order:1">
+								<li><a href="https://www.vacationstogo.com/">Vacations-to-Go</a></li>
+									<p>I use this site for researching deals on cruises with under 2 months before the sail date. In the past I've managed to get deals of 50% off or more. The trade off for this is that airfare
+									may be more expensive due to the late booking. I highly recommend comparing the price here to the price on the cruise company's official site.
+									Many have price guarantees that you can take advantage of.</p>
+								</div>
+								<div class="contentBox" style="order:2">
+								<li><a href="https://www.viator.com/">Viator</a></li>
+									<p>This site is great for finding guided day trips and other things to do in locations. I've used it many times on cruises to find similar offering to the cruise excursions at cheaper prices.
+									Be sure to note the terms and conditions of any offer, required documentation, and ticketing policies. Some require a paper ticket, some offer smart-phone ticketing, virtually all require photo ID, 
+									etc.</p>
+								</div>
+								<div class="contentBox" style="order:3">
+								<li><a href="https://www.carnival.com/">Carnival</a></li>
+									<p>I love cruising with Carnival. The atmosphere on the ships is more laid back than it was on Royal Caribbean, while the quality is comparable. Cruising on Carnival over Spring Break and St Patrick's Day 
+									are experiences I will not forget! Their site is slightly difficult to navigate, but improvements are being made. If you plan to book a cruise a year or two in advance, take advantage of their site.</p>
+								</div>
+								<div class="contentBox" style="order:4">
+								<li><a href="https://www.hotels.com/">Hotels.com</a></li>
+									<p>Booking hotels has become a game of cat and mouse recently with the Internet. I've found that to get the best deal I have to go to multiple sites, the company's, Hotels.com, and Kayak.
+									 Shop around enough and you can find some great deals. However, don't overlook the power of Google Maps for locating and booking hotels.</p>
+								</div>
+								<div class="contentBox" style="order:5">
+								<li><a href="https://www.kayak.com/">Kayak.com</a></li>
+									<p>Kayak has become my goto site for airfare. The deals available here are usually unbeatable, unless you want to risk long delays, fees, and multiple plane changes. The only issue I have with Kayak is 
+									if I want to fly Southwest, or Jet Blue. To fly those airlines it has been best to book directly through their corporate sites.</p>
+								</div>
+								<div class="contentBox" style="order:6">
+								<li><a href="https://www.google.com">Google</a></li>
+									<p>To paraphrase Darth Vader "Do not under estimate the power of the Google." My recent Europe trip had me scrambling to find affordable hotel options for the New York City portion. Finally, using Google Maps 
+									we were able to locate an affordable, quality hotel within easy walking distance of Time Square, the USS Intrepid, and several other attractions. While not as easy to use as Kayak or Hotels.com, it has the benefit of 
+									many options that aren't listed on either of those sites. Plus you can immediately see the location of the hotel related to nearby attractions.</p>
+								</div>
+								<div class="contentBox" style="order:7">
+								<li>Other Cruise Company Sites</li>
+									<p>If the party atmosphere on Carnival isn't for you take a look at some of the other cruise lines home pages. I generally browse itineraries on Vacations-to-Go then compare the pricing and get more information 
+									on the company's sites.</p>
+								</div>
+							</ul>
+					</div>
+					
+					<div class="contentBox" style="order:2">
+						<h3>Resources I Don't Use</h3>
+							<ul>
+								<li>Expedia</li>
+									<p>
+									I used to be a huge fan of Expedia, but then I got burned multiple times. I booked a flight with them and was told that I could add check bags for X price after the booking. I tried to do so, and was informed that I needed to add 
+									the bags at the gate for the same price. At the gate I was informed that this was incorrect and the price would be 4 times as much as was quoted. Nothing I did could get them to budge, and since this was the final leg of the 
+									trip I was stuck. This was just the latest example of issues I've had with this site. Confusing terms and conditions, unclear fine print, offers that lead you in only to no longer be available, all of these have led me to stop 
+									using this site altogether. The final draw was the amount of marketing that was sent to me by the company after signing up for an account with them. Dozens of messages peppered my inbox about add-ons, and up-sells.
+									<br>
+									My advice, stay clear and use at your own risk.
+									</p>
+							</ul>
+					</div>
+				</div>
+				
+			</div>
+		</main>
+		<footer>
+			<div class="footer">
+				<p>Copyright &copy; 2019 Michael W. Booth
+				<br> 
+				<a href="mailto:mike.booth5k@gmail.com">mike.booth5k@gmail.com</a>
+				<br>
+				<a href="#top" class="hiddenLink">Return to Top</a>
+				</p>
+			</div><!--End Footer-->
+		</footer>	
 	</div><!--End Container-->
-	
+		<!--Script for Responsive Navbar-->
+		<script>
+			let mainNav = document.getElementById('js-menu');
+			let navBarToggle = document.getElementById('js-navbar-toggle');
+
+			navBarToggle.addEventListener('click', function () {
+			  mainNav.classList.toggle('active');
+			});
+		</script>
+		
+	<!--Script for Google Search-->	
+		<script>
+			(function() {
+				var cx = '016384449634247220215:pqi1rorlyiy';
+				var gcse = document.createElement('script');
+				gcse.type = 'text/javascript';
+				gcse.async = true;
+				gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(gcse, s);
+				})();
+		</script>
 </body>
 </html>

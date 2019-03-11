@@ -2,108 +2,186 @@
 <html lang="en">
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135900001-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-<link rel="stylesheet" href="style/style.css">
+	  gtag('config', 'UA-135900001-1');
+	</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="icon" href="./images/favicon.png" type="image/ico">
+	<title>Mike's Past Trips</title>
 
+    <meta name="description" content="Mike Booth's MIS 3450 Term Project Site">
+
+    <meta name="author" content="Mike Booth">
+
+    <meta name="keywords" content="Project, MIS 3450, Travel, Cruise, Europe, Mexico, Caribbean, Texas, Florida, Canada, New York, St Thomas, Grenada, Barbados, Tobago, Aruba, Grand Cayman, Houston, St Marteen, St Martin, Puerto Rico, Grand Turk, Disney World, 
+	Universal Studios, London, Bath, Stonehenge, Gibraltar, Granada, Malaga, Genralife, Alhambra, Spain, England, Nova Scotia, Halifax, Lisbon, Portugal, Vigo, Tui, Valenca, Cabo San Lucas, Mazatlan, Puerto Vallarta">
+
+	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="icon" href="./images/favicon.png" type="image/ico">
+	
+	<!--[if lt IE 9]>
+    <script src="scripts/html5shiv.js"></script>
+    <![endif]-->
+	
 </head>
 <body>
 
 	<div class="container">	
 	
-		<div class="topnav">
+		<nav class="navbar">
 		
-			<a href="index.html"><img src="./images/crop_logo_transparent.png" alt="Logo" class="logo"></a>			
-			<ul class="navbar" id="nav">				
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="resources.html">Useful Resources</a></li>			
-				<li><a href="going.html">Where I'm Going</a></li>				
-				<li class="active"><a class="active" href="trips.html">Where I've Been</a></li>				
-			</ul>
+			<label class="navbar-toggle" id="js-navbar-toggle">
+				<i class="fa fa-bars"></i>
+			</label>
 			
-		</div>
+			<a href="index.html" class="logo"><img src="./images/crop_logo_transparent.png" id="logo"></a>
+			
+			<ul class="main-nav" id="js-menu">
+				
+				<div class="dropdown">
+					<button class="dropbtn">Past Trips<i class="fa fa-caret-down"></i></button>
+						<div class="dropdown-content">
+							<a href="trips.html">Trip List</a>
+							<a href="mexico2006.html">Mexico 2006</a>
+							<a href="caribbean2015.html">Caribbean 2015</a>
+							<a href="caribbean2016.html">Caribbean 2016</a>
+							<a href="florida2017.html">Florida 2017</a>
+							<a href="europe2018.html">Europe 2018</a>
+						</div>
+				</div>
+				
+				<li>
+					<a href="going.html" class="nav-links">Future Trips</a>
+				</li>
+				<li>
+					<a href="resources.html" class="nav-links">Useful Resources</a>
+				</li>
+				
+				<li>
+					<a href="trips.html" class="activeLink" id="tripLink">Past Trips</a>
+				</li>
 
-	<div class="contentContainer">
-	
-		<div class="flexcontainer">
-								<!--remove or comment this in-line style declaration to replicate issue-->
-			<div class="header" style="background: url(./images/banner.jpg)">			
-				<h2>Past Trips</h2>				
-			</div>
-			
-			<div class="hide">
-				*****************************************************************************************************************************************************************************
-			</div>
-			
-			<div class="tripBox" style="order:1">
-				<h3>Mexico 2006</h3>
-					<ol>
-						<li>Cabo San Lucas</li>
-						<li>Mazatlan</li>
-						<li>Puerto Vallarta</li>
-					</ol>
-			</div>
-			
-			<div class="tripBox" style="order:2">
-				<h3>Caribbean and Everglades 2015</h3>
-				<ol>
-					<li>St Marteen</li>
-					<li>Puerto Rico</li>
-					<li>Grand Turk</li>
-					<li>Florida Everglades</li>
-				</ol>
-			</div>
-			
-			<div class="tripBox" style="order:3">
-				<h3>Southern Caribbean and Texas, 2016</h3>
-				<ol>
-					<li>St Thomas</li>
-					<li>Grenada</li>
-					<li>Barbados</li>
-					<li>Tobago</li>
-					<li>Aruba</li>
-					<li>Grand Cayman</li>
-					<li>Houston, Texas</li>
-				</ol>
-			</div>
-			
-			<div class="tripBox" style="order:4">
-				<h3>Florida 2017</h3>
-				<ol>
-					<li>Disney World</li>
-					<li>Universal Studios Orlando</li>
-				</ol>
-			</div>
-			
-			<div class="tripBox" style="order:5">
-				<h3>Western Europe, Canada, and New York 2018</h3>
-				<ol>
-					<li>London, England</li>
-					<li>Bath, England</li>
-					<li>Stonehenge</li>
-					<li>Gibraltar</li>
-					<li>Granada, Malaga, Genralife, and the Alhambra, Spain</li>
-					<li>Halifax, Nova Scotia</li>
-					<li>Lisbon, Portugal</li>
-					<li>Vigo, Tui, and Valenca, Spain and Portugal</li>
-					<li>New York, New York</li>
-				</ol>
-			</div>
-			
-		</div>
+			</ul>
+				
+				<div class="search"><gcse:search></gcse:search></div>
+				
+		</nav><!--End Nav-->
 		
-	</div>
+		<header class="header" id="beenPage">			
+			<h1>Past Trips</h1>				
+		</header>
 	
-		<div class="footer">
-			<p>Copyright &copy; 2019 Michael W. Booth
-			<br> 
-			<a href="mailto:mike.booth5k@gmail.com">mike.booth5k@gmail.com</a>
-			</p>
-		</div><!--End Footer-->
+		<main>
+			<div class="contentContainer">
+				<div class="flexcontainer">
+					<div>
+						<h1 id="goingTitle">Places I've been by trip:</h1>
+					</div>
+					
+					<div class="hide" style="order:2">
+						*****************************************************************************************************************************************************************************
+					</div>
+					
+					<div class="tripBox" style="order:3">
+						<a href="mexico2006.html"><h2>Mexico, 2006</h2></a>
+							<ol>
+								<li>Cabo San Lucas</li>
+								<li>Mazatlan</li>
+								<li>Puerto Vallarta</li>
+							</ol>
+					</div>
+					
+					<div class="tripBox" style="order:4">
+						<a href="caribbean2015.html"><h2>Caribbean and Everglades, 2015</h2></a>
+						<ol>
+							<li>St Marteen</li>
+							<li>Puerto Rico</li>
+							<li>Grand Turk</li>
+							<li>Florida Everglades</li>
+						</ol>
+					</div>
+					
+					<div class="tripBox" style="order:5">
+						<a href="caribbean2016.html"><h2>Southern Caribbean and Texas, 2016</h2></a>
+						<ol>
+							<li>St Thomas</li>
+							<li>Grenada</li>
+							<li>Barbados</li>
+							<li>Tobago</li>
+							<li>Aruba</li>
+							<li>Grand Cayman</li>
+							<li>Houston, Texas</li>
+						</ol>
+					</div>
+					
+					<div class="tripBox" style="order:6">
+						<a href="florida2017.html"><h2>Florida, 2017</h2></a>
+						<ol>
+							<li>Disney World</li>
+							<li>Universal Studios Orlando</li>
+						</ol>
+					</div>
+					
+					<div class="tripBox" style="order:7">
+						<a href="europe2018.html"><h2>Western Europe, Canada, and New York, 2018</h2></a>
+						<ol>
+							<li>London, England</li>
+							<li>Bath, England</li>
+							<li>Stonehenge</li>
+							<li>Gibraltar</li>
+							<li>Granada, Malaga, Genralife, and the Alhambra, Spain</li>
+							<li>Halifax, Nova Scotia</li>
+							<li>Lisbon, Portugal</li>
+							<li>Vigo, Tui, and Valenca, Spain and Portugal</li>
+							<li>New York, New York</li>
+						</ol>
+					</div>
+					
+				</div>
+				
+			</div>
+		</main>
+		
+		<footer>
+			<div class="footer">
+				<p>Copyright &copy; 2019 Michael W. Booth
+				<br> 
+				<a href="mailto:mike.booth5k@gmail.com">mike.booth5k@gmail.com</a>
+				<br>
+				<a href="#top" class="hiddenLink">Return to Top</a>
+				</p>
+			</div><!--End Footer-->
+		</footer>
 		
 	</div><!--End Container-->
-	
+		<!--Script for Responsive Navbar-->
+		<script>
+			let mainNav = document.getElementById('js-menu');
+			let navBarToggle = document.getElementById('js-navbar-toggle');
+
+			navBarToggle.addEventListener('click', function () {
+			  mainNav.classList.toggle('active');
+			});
+		</script>
+		
+	<!--Script for Google Search-->	
+		<script>
+			(function() {
+				var cx = '016384449634247220215:pqi1rorlyiy';
+				var gcse = document.createElement('script');
+				gcse.type = 'text/javascript';
+				gcse.async = true;
+				gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(gcse, s);
+				})();
+		</script>
 </body>
 </html>
